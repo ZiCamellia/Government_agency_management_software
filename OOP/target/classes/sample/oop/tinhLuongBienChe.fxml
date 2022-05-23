@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane prefHeight="524.0" prefWidth="1156.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.oop.ControllerTinhLuongBienChe">
+   <children>
+      <Label layoutX="235.0" layoutY="14.0">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="247.0" text=" Lương cơ bản" />
+      <Label layoutX="82.0" layoutY="295.0" text="Hệ số lương" />
+      <Label layoutX="75.0" layoutY="331.0" prefHeight="21.0" prefWidth="72.0" text="  Phụ cấp" />
+      <TextField fx:id="txtLuongCoBan" layoutX="234.0" layoutY="249.0" promptText="Lương cơ bản" />
+      <TextField fx:id="txtHeSoLuong" layoutX="234.0" layoutY="290.0" promptText="Hệ số lương" />
+      <TextField fx:id="txtPhuCap" layoutX="234.0" layoutY="326.0" promptText="Phụ cấp" />
+      <Label layoutX="73.0" layoutY="370.0" prefHeight="21.0" prefWidth="72.0" text="   Lương" />
+      <TextField fx:id="txtLuongCuaBan" layoutX="234.0" layoutY="365.0" />
+      <Button layoutX="23.0" layoutY="431.0" mnemonicParsing="false" onAction="#tinhLuong" text="Tính lương">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="200.0" layoutX="51.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/tinh02.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="189.0" layoutY="431.0" mnemonicParsing="false" onAction="#Luu" text="Lưu">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="200.0" layoutX="51.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/luu.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="294.0" layoutY="431.0" mnemonicParsing="false" onAction="#BackToTable">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="200.0" layoutX="51.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/back4.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextField fx:id="txtId" layoutX="234.0" layoutY="120.0" />
+      <TextField fx:id="txtMsnv" layoutX="234.0" layoutY="208.0" />
+      <Label layoutX="82.0" layoutY="155.0" prefHeight="21.0" prefWidth="81.0" text="Họ và tên" />
+      <Label layoutX="82.0" layoutY="198.0" prefHeight="21.0" prefWidth="45.0" text="MSNV" />
+      <TextField fx:id="txtName" layoutX="234.0" layoutY="165.0" />
+      <Label layoutX="84.0" layoutY="125.0" text="ID" />
+      <TableView fx:id="tableView" layoutX="441.0" layoutY="125.0" onMouseClicked="#chon" prefHeight="357.0" prefWidth="701.0">
+         <columns>
+            <TableColumn fx:id="idColumn" prefWidth="35.0" text="ID" />
+            <TableColumn fx:id="tenColumn" prefWidth="97.0" text="Họ và tên" />
+            <TableColumn fx:id="msnvColumn" prefWidth="60.0" text="MSNV" />
+            <TableColumn fx:id="nsColumn" prefWidth="86.0" text="Năm sinh" />
+            <TableColumn fx:id="thoiGianVaoLamColumn" prefWidth="87.0" text="Thời gian vào làm" />
+            <TableColumn fx:id="luongColumn" prefWidth="71.0" text="Lương" />
+            <TableColumn fx:id="luongCoBanColumn" prefWidth="90.0" text="Lương cơ bản" />
+            <TableColumn fx:id="heSoLuong" prefWidth="101.0" text="Hệ số lương" />
+            <TableColumn fx:id="phuCapColumn" prefWidth="73.0" text="Phụ cấp" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="50.0" fitWidth="137.0" layoutX="441.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/timkiem.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtTimKiem" layoutX="608.0" layoutY="68.0" prefHeight="31.0" prefWidth="502.0" promptText="Nhập từ khóa" />
+   </children>
+</AnchorPane>

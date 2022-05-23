@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane prefHeight="665.0" prefWidth="1331.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.oop.ControllerTT">
+   <children>
+      <TableView fx:id="tableView" layoutX="14.0" layoutY="70.0" onMouseClicked="#chon" prefHeight="578.0" prefWidth="875.0">
+        <columns>
+          <TableColumn fx:id="idColumn" minWidth="0.0" prefWidth="0.0" text="ID" />
+          <TableColumn fx:id="tenColumn" prefWidth="231.0" text="Họ và tên" />
+            <TableColumn fx:id="msnvColumn" prefWidth="97.0" text="MSNV" />
+            <TableColumn fx:id="nsColumn" prefWidth="146.0" text="Năm sinh" />
+            <TableColumn fx:id="thoiGianVaoLamColumn" prefWidth="135.0" text="Thời gian vào làm" />
+            <TableColumn fx:id="loaiNVColumn" prefWidth="136.0" text="Loại NV" />
+            <TableColumn fx:id="luongColumn" prefWidth="129.0" text="Lương" />
+        </columns>
+      </TableView>
+      <Label layoutX="926.0" layoutY="228.0" prefHeight="14.0" prefWidth="81.0" text="Họ và tên" />
+      <Label layoutX="927.0" layoutY="273.0" text="Mã số NV" />
+      <ComboBox fx:id="cbLoaiNV" layoutX="1084.0" layoutY="180.0" prefHeight="31.0" prefWidth="170.0" promptText="Loại nhân viên" />
+      <Label layoutX="923.0" layoutY="185.0" text="Loại nhân viên" textFill="#1e1d1d" />
+      <Label layoutX="928.0" layoutY="320.0" text="Năm sinh" />
+      <Label layoutX="926.0" layoutY="363.0" text="Thời gian vào làm" />
+      <TextField fx:id="txtTen" layoutX="1083.0" layoutY="223.0" prefHeight="31.0" prefWidth="170.0" promptText="Họ và tên" />
+      <TextField fx:id="txtMSNV" layoutX="1083.0" layoutY="268.0" prefHeight="31.0" prefWidth="170.0" promptText="Mã số nhân viên" />
+      <Button fx:id="btnthem" layoutX="935.0" layoutY="459.0" maxHeight="40.0" mnemonicParsing="false" onAction="#them" text="Thêm" textFill="#0d0d0d">
+          <graphic>
+              <ImageView fitHeight="35.0" fitWidth="200.0" layoutX="51.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@image/them02.png" />
+                  </image>
+              </ImageView>
+          </graphic>
+      </Button>
+      <Button fx:id="reset" layoutX="1005.0" layoutY="540.0" mnemonicParsing="false" onAction="#reset" prefHeight="40.0" prefWidth="104.0" text="Reset" textFill="#070707">
+          <graphic>
+              <ImageView fitHeight="35.0" fitWidth="39.0" layoutX="51.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@image/reset1.png" />
+                  </image>
+              </ImageView>
+          </graphic>
+      </Button>
+      <Button fx:id="capNhat" layoutX="1129.0" layoutY="539.0" maxHeight="40.0" mnemonicParsing="false" onAction="#capNhat" text="Cập nhật" textFill="#0a0a0a">
+          <graphic>
+              <ImageView fitHeight="35.0" fitWidth="64.0" layoutX="51.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@image/sua01.png" />
+                  </image>
+              </ImageView>
+          </graphic>
+      </Button>
+      <Button fx:id="btnXoa" layoutX="1057.0" layoutY="459.0" mnemonicParsing="false" onAction="#xoa" prefHeight="40.0" prefWidth="85.0" text="Xóa" textFill="#0a0a0a">
+          <graphic>
+              <ImageView fitHeight="35.0" fitWidth="200.0" layoutX="51.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@image/xoaPTS2.png" />
+                  </image>
+              </ImageView>
+          </graphic>
+      </Button>
+      <Button fx:id="tinhLuong" blendMode="SRC_ATOP" layoutX="1165.0" layoutY="459.0" mnemonicParsing="false" onAction="#tinhLuong" prefHeight="45.0" prefWidth="146.0" text="Tính lương" textFill="#080707">
+          <graphic>
+              <ImageView fitHeight="35.0" fitWidth="200.0" layoutX="51.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@image/tinh01.png" />
+                  </image>
+              </ImageView>
+          </graphic>
+      </Button>
+      <TextField fx:id="txtLuong" layoutX="1083.0" layoutY="407.0" prefHeight="31.0" prefWidth="170.0" promptText="Lương cơ bản" />
+      <Label layoutX="928.0" layoutY="412.0" text="Lương" />
+      <Label layoutX="921.0" layoutY="138.0" text="ID" />
+      <TextField fx:id="txtId" layoutX="1083.0" layoutY="138.0" prefHeight="31.0" prefWidth="170.0" />
+      <TextField fx:id="txtKeyword" layoutX="160.0" layoutY="20.0" prefHeight="31.0" prefWidth="604.0" promptText="Nhập từ khóa" />
+      <ImageView fitHeight="50.0" fitWidth="137.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/timkiem.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="85.0" fitWidth="178.0" layoutX="1044.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/logo.png" />
+         </image>
+      </ImageView>
+      <DatePicker fx:id="datePicker" layoutX="1083.0" layoutY="358.0" prefHeight="31.0" prefWidth="170.0" promptText="Thời gian vào làm" />
+      <DatePicker fx:id="dateNS" layoutX="1083.0" layoutY="315.0" prefHeight="31.0" prefWidth="170.0" promptText="Năm sinh" />
+   </children>
+</AnchorPane>

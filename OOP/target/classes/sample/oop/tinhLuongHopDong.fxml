@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane prefHeight="563.0" prefWidth="1142.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.oop.ControllerHopDong">
+   <children>
+      <Label layoutX="97.0" layoutY="138.0" text="ID" />
+      <Label layoutX="94.0" layoutY="186.0" text="Họ và tên" />
+      <Label layoutX="94.0" layoutY="233.0" text="MSNV" />
+      <Label layoutX="94.0" layoutY="283.0" text="Tiền công một ngày" />
+      <Label layoutX="94.0" layoutY="328.0" text="Số ngày làm" />
+      <Label layoutX="94.0" layoutY="374.0" text="Lương " />
+      <Button layoutX="36.0" layoutY="425.0" mnemonicParsing="false" onAction="#tinhLuong" text="Tính lương">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="200.0" layoutX="51.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/tinh02.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="202.0" layoutY="425.0" mnemonicParsing="false" onAction="#Luu" text="Cập nhật">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="200.0" layoutX="51.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/luu1.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="347.0" layoutY="425.0" mnemonicParsing="false" onAction="#backToTable">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="200.0" layoutX="51.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/back4.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextField fx:id="txtId" layoutX="243.0" layoutY="138.0" />
+      <TextField fx:id="txtName" layoutX="243.0" layoutY="181.0" />
+      <TextField fx:id="txtMsnv" layoutX="243.0" layoutY="228.0" />
+      <TextField fx:id="txtTienCongMotNgay" layoutX="243.0" layoutY="278.0" promptText="Tiền công một ngày" />
+      <TextField fx:id="txtSoNgayLam" layoutX="243.0" layoutY="323.0" promptText="Số ngày làm việc" />
+      <TextField fx:id="txtLuong" layoutX="243.0" layoutY="369.0" />
+      <TableView fx:id="tableView" layoutX="477.0" layoutY="133.0" onMouseClicked="#chon" prefHeight="336.0" prefWidth="646.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="39.0" text="ID" />
+          <TableColumn fx:id="tenColumn" prefWidth="105.0" text="Họ và tên" />
+            <TableColumn fx:id="msnvColumn" prefWidth="81.0" text="MSNV" />
+            <TableColumn fx:id="nsColumn" prefWidth="75.0" text="Năm sinh" />
+            <TableColumn fx:id="thoiGianVaoLamColumn" prefWidth="84.0" text="Thời gian vào làm" />
+            <TableColumn fx:id="luongColumn" prefWidth="70.0" text="Lương" />
+            <TableColumn fx:id="soNgayLamColumn" prefWidth="98.0" text="Số ngày làm" />
+            <TableColumn fx:id="tienCongMotNgayColumn" prefWidth="93.0" text="Tiền công theo ngày" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="50.0" fitWidth="164.0" layoutX="470.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/timkiem.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtTimKiem" layoutX="657.0" layoutY="74.0" prefHeight="31.0" prefWidth="409.0" promptText="Nhập từ khóa" />
+   </children>
+</AnchorPane>

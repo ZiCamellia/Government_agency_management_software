@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.oop.ControllerDangKi">
+   <children>
+      <Label layoutX="132.0" layoutY="103.0" text="Email" />
+      <Label layoutX="132.0" layoutY="153.0" text="Tên đăng nhập" />
+      <Label layoutX="132.0" layoutY="200.0" text="Mật khẩu" />
+      <TextField fx:id="txtEmail" layoutX="275.0" layoutY="98.0" promptText="Email" />
+      <Label layoutX="132.0" layoutY="245.0" prefHeight="21.0" prefWidth="125.0" text="Nhập lại mật khẩu" />
+      <TextField fx:id="txtUsername" layoutX="275.0" layoutY="148.0" promptText="Tên đăng nhập" />
+      <PasswordField fx:id="txtPassword" layoutX="275.0" layoutY="195.0" promptText="Mật Khẩu" />
+      <PasswordField fx:id="txtRepassword" layoutX="275.0" layoutY="240.0" promptText="Nhập lại mật khẩu" />
+      <Button layoutX="140.0" layoutY="307.0" mnemonicParsing="false" onAction="#dangKi" text="Đăng kí">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="200.0" layoutX="51.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/dangki.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="275.0" layoutY="307.0" mnemonicParsing="false" onAction="#Reset" text="Reset">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="200.0" layoutX="51.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/reset1.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="404.0" layoutY="307.0" mnemonicParsing="false" onAction="#dangNhap" text="Đăng nhập">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="200.0" layoutX="51.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/dangnhap.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fitHeight="175.0" fitWidth="236.0" layoutX="-6.0" layoutY="-40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/login.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
